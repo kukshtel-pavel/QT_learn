@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     window.move(300,300);
     window.setWindowTitle("MyClock");               // устанавливаем заголовок для окна
     window.setToolTip("current Date and Time");     // устанавливаем всплывающую подсказку для виджета
-    window.setWindowIcon(QIcon("logo2.png"));       // устанавливаем логотип для окна
+    window.setWindowIcon(QIcon(":/source/source/clock_icon.png"));       // устанавливаем логотип для окна
     window.show();
 
 
