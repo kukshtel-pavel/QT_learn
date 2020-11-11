@@ -15,9 +15,6 @@ class MyWidget :public QWidget
 MyWidget::MyWidget(QWidget *parent)
     : QWidget(parent) {
 
-    //QFrame *frameTime = new QFrame(this);
-    //QFrame *frameDate = new QFrame(this);
-
     QLabel *labelTime = new QLabel(this);
     QLabel *labelDate = new QLabel(this);
 
@@ -29,9 +26,6 @@ MyWidget::MyWidget(QWidget *parent)
     grid->addWidget(labelDate, 1, 0);
     labelDate->setToolTip("current Date");
     labelDate->setText("0");
-
-    //frameTime->setFrameStyle(QFrame::Box); //show/hide border of frame
-    //frameDate->setFrameStyle(QFrame::Box);
 
     setLayout(grid);
 }
