@@ -7,27 +7,28 @@
 #include <QLabel>
 
 
-class Field :public QWidget
+class MyWidget :public QWidget
 {
-    public: Field(QWidget *parent = 0);
+    public: MyWidget(QWidget *parent = 0);
 };
 
-Field::Field(QWidget *parent)
+MyWidget::MyWidget(QWidget *parent)
     : QWidget(parent) {
 
-    QFrame *frameTime = new QFrame(this);
-    QFrame *frameDate = new QFrame(this);
+    //QFrame *frameTime = new QFrame(this);
+    //QFrame *frameDate = new QFrame(this);
 
-    //QLabel *labelTime = new QLabel(this);
-    //QLabel *labelDate = new QLabel(this);
+    QLabel *labelTime = new QLabel(this);
+    QLabel *labelDate = new QLabel(this);
 
     QGridLayout *grid  = new QGridLayout(this);
-    grid->addWidget(frameTime, 0, 0);
-    frameTime->setToolTip("current Time");
-    //
+    grid->addWidget(labelTime, 0, 0);
+    labelTime->setToolTip("current Time");
+    labelTime->setText("0");
 
-    grid->addWidget(frameDate, 1, 0);
-    frameDate->setToolTip("current Date");
+    grid->addWidget(labelDate, 1, 0);
+    labelDate->setToolTip("current Date");
+    labelDate->setText("0");
 
     //frameTime->setFrameStyle(QFrame::Box); //show/hide border of frame
     //frameDate->setFrameStyle(QFrame::Box);
@@ -43,7 +44,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    Field window;
+    MyWidget window;
 
     window.resize(350,150);
     window.move(300,300);
